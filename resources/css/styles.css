@@ -1,0 +1,307 @@
+/* Universal Styles */
+
+html {
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+    letter-spacing: .3em;
+    word-spacing: .5em;
+    text-align: center;
+    font-family: Teko, sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 55px;
+    letter-spacing: .3em;
+    word-spacing: .5em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+h5 {
+    font-size: 24px;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+a {
+    background-color:beige;
+    /* border: solid black 2px; */
+    box-shadow: 3px 3px #bbb;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    background-color: #aaa;
+}
+
+a:active {
+    color: white;
+}
+
+/* Nav Bar */
+
+#nav-bar {
+    background-color: hsl(0, 0%, 90%);
+    display: grid;
+    grid-template: 1fr, repeat(12, 1fr);
+    font-size: 2rem;
+    position: fixed;
+    width: 100%;
+}
+
+#nav-bar nav {
+    grid-column-start: 10;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#nav-bar li {
+    display: inline;
+}
+
+#nav-bar h2 {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 830px) {
+    #nav-bar {
+        display: none;
+    }
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    background-image: url("../images/studio.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner {
+    background-color: hsl(0, 0%, 90%);
+    padding: 10px;
+    /* grid-column: 1 / 13;
+    grid-row-start: 5; */
+    width: 100%;
+    text-align: center;
+
+}
+
+header strong {
+    font-weight: 800;
+    color: #852;
+}
+
+@media only screen and (max-width: 830px) {
+    header {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .banner {
+        background-color: white;
+    }
+
+    h1 {
+        letter-spacing: .1em;
+    }
+}
+
+
+
+/* Main */
+
+main {
+    margin: 2rem 0;
+}
+
+.main h2 {
+    padding: 20px 0;
+}
+
+/* Services */
+
+#services .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+
+}
+
+#services .box img {
+    width: 100%;
+
+}
+
+#services .box {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    width: 40%;
+    height: 60%;
+}
+
+#services .box.text {
+    margin-top: 0;
+}
+
+#services {
+    margin-bottom: 30px;
+    margin-top: 45px;
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #services .container {
+        flex-direction: column;
+    }
+
+    #services .box {
+        width: 100%;
+    }
+}
+/* People */
+
+#people h4 {
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+
+#people h2 {
+    margin-bottom: 15px;
+}
+
+#people .images, #people .names {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+
+#people img, #people h4 {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+#people .images h4 {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 450px) {
+
+    #people .images, #people .names {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #people img {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    #people .images h4 {
+        display: block;
+        margin: 1rem;
+    }
+
+    #people .names {
+        display: none;
+    }
+}
+
+/* footer */
+
+footer {
+    position: relative;
+    background-image: url("../images/wood.jpg");
+    color: white;
+    background-size: cover;
+    background-repeat: none;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    z-index: 1;
+}
+
+footer .box {
+    text-align: center;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    z-index: 4;
+}
+
+#copyright {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    z-index: 0;
+
+}
+
+footer h4, footer h3 {
+    z-index: 1;
+}
+
+footer .box {
+    z-index: 2;
+}
